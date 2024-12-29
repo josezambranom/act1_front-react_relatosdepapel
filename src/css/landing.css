@@ -1,0 +1,66 @@
+body {
+    background-color: #f6f1cf;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+}
+
+.landing__imagen {
+    background-image: url("../../public/logo_rdp_blank.png");
+    background-size: cover;
+    width: 220px;
+    height: 220px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+.landing__titulo {
+    font-size: 50px;
+    color: #021129;
+}
+
+.landing__descripcion {
+    margin: 0;
+    font-size: 20pt;
+
+}
+
+/* Estilo para el puntero láser */
+.landing__pointer, .landing__pointer-reverse {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #815f44;
+    border-radius: 50%;
+    top: calc(80% + 2px);
+    left: 50%;
+    animation: moveHorizontal 2s linear infinite;
+}
+
+.landing__pointer-reverse {
+    animation: moveHorizontalReverse 2s linear infinite;
+}
+
+/* Animación para moverse horizontalmente debajo del título */
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-400px);
+    }
+    100% {
+        transform: translateX(400px);
+    }
+}
+
+@keyframes moveHorizontalReverse {
+    0% {
+        transform: translateX(400px);
+    }
+    100% {
+        transform: translateX(-400px);
+    }
+}
