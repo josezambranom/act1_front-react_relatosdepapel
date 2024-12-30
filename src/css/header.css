@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+.header__container {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header__imagen {
     width: 100px;
     height: 100px;
@@ -13,8 +20,129 @@
 }
 
 .header__titulo {
-    margin-left: 20px;
     font-size: 30pt;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.header__cartshop {
+    position: relative;
+}
+
+.header__cartshop-img {
+    width: 30px;
+    height: auto;
+}
+
+.header__cartshop-img:hover {
+    width: 50px;
+    cursor: pointer;
+}
+
+.header__cartshop::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-shop {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    width: 350px;
+    z-index: 10;
+}
+
+.menu__shop-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    overflow-y: scroll;
+ }
+
+.menu-shop__head {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 5px 20px;
+    border-bottom: 1px solid #9c9ea5;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.menu-shop__titulo {
+    font-size: 12pt;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase   ;
+}
+
+.menu-shop__mostrar {
+    display: block;
+}
+
+.menu-shop__item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr  1fr;
+    gap: 10px;
+    text-align: center;
+    border-bottom: 1px solid #9c9ea5;
+    font-weight: 500;
+}
+
+.menu-shop__empty {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    padding: 15px 0;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.menu-shop__total {
+    display: flex;
+    justify-content: space-around;
+    text-align: right;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #333;;
+}
+
+.menu-shop__item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-shop__boton {
+    border: none;
+    background-color: #0c2459;
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu-shop__boton:hover {
+    cursor: pointer;
+}
+
+.menu-shop__boton--eliminar {
+    background-color: #c32727;
 }

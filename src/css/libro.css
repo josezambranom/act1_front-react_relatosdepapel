@@ -48,23 +48,25 @@
 .libro {
     display: block;
     margin: 50px auto;
-    padding: 20px 50px;
-    background-color: black;
-    color: #ffffff;
+    padding: 30px 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 280px;
-    height: 280px;
+    height: auto;
     font-size: 14pt;
 }
 
 .libro__boton {
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
     padding: 10px 20px;
-    background-color: #815f44;
+    background-color: #0c2459;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 .libro__boton:hover {
-    background-color: rgb(103, 77, 53);
+    background-color: #153c93;
 }

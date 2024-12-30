@@ -1,14 +1,17 @@
-import { useEffect } from 'react';
-import { useNavigate} from 'react-router-dom';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const useRedirection = (path, delay) => {
-
+const useRedirection = (path, delay, condition = true) => {
     const navigate = useNavigate();
+
     useEffect(() => {
-        setTimeout(() => {
-            navigate(path);
-        }, delay);
-    });
+        if (condition) {
+            const timer = setTimeout(() => {
+                navigate(path);
+            }, delay);
+            return () => clearTimeout(timer);
+        }
+    }, [path, delay, condition, navigate]);
 };
 
 export default useRedirection;

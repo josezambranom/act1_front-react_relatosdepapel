@@ -3,12 +3,7 @@ import {useEffect, useState} from "react";
 export const useLibros = () => {
 
     const [libros, setLibros] = useState([]);
-    /**
-     * Se hace uso de useEffect para definir un efecto de montaje que traerá la información de ingredientes
-     * del back-end en el primer renderizado.
-     */
     useEffect(() => {
-        //fetch(process.env.REACT_APP_GW_URL).then((res) => res.json()).then((res) => setRestaurants(res));
 
         setTimeout(() => {
             setLibros([
